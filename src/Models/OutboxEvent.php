@@ -47,18 +47,15 @@ class OutboxEvent extends Model
         return config('outbox.connection') ?? parent::getConnectionName();
     }
 
-    protected function casts(): array
-    {
-        return [
-            'status' => OutboxEventStatus::class,
-            'payload' => 'array',
-            'metadata' => 'array',
-            'next_retry_at' => 'datetime',
-            'locked_until' => 'datetime',
-            'processed_at' => 'datetime',
-            'attempts' => 'integer',
-        ];
-    }
+    protected $casts = [
+        'status' => OutboxEventStatus::class,
+        'payload' => 'array',
+        'metadata' => 'array',
+        'next_retry_at' => 'datetime',
+        'locked_until' => 'datetime',
+        'processed_at' => 'datetime',
+        'attempts' => 'integer',
+    ];
 
     protected static function booted(): void
     {
