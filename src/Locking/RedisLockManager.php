@@ -8,29 +8,38 @@ use Outbox\Contracts\LockManager;
 
 class RedisLockManager implements LockManager
 {
+    private ?string $owner = null;
+
     public function acquire(string $key, int $ttlSeconds): bool
     {
         $store = $this->getStore();
+        $lock = $store->lock($key, $ttlSeconds);
+        $acquired = $lock->get();
 
-        return $store->lock($key, $ttlSeconds)->get();
+        if ($acquired) {
+            $this->owner = $lock->owner();
+        }
+
+        return $acquired;
     }
 
     public function release(string $key): void
     {
-        $this->getStore()->lock($key)->forceRelease();
+        $this->getStore()->restoreLock($key, $this->owner)->release();
+        $this->owner = null;
     }
 
     public function extend(string $key, int $ttlSeconds): bool
     {
-        $this->release($key);
+        $this->getStore()->lock($key)->forceRelease();
 
         return $this->acquire($key, $ttlSeconds);
     }
 
     private function getStore(): Repository
     {
-        $connection = config('outbox.locking.redis.connection', 'default');
+        $store = config('outbox.locking.redis.store', 'redis');
 
-        return Cache::store('redis');
+        return Cache::store($store);
     }
 }

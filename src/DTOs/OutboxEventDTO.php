@@ -4,13 +4,13 @@ namespace Outbox\DTOs;
 
 use Outbox\Contracts\OutboxEventData;
 
-final readonly class OutboxEventDTO implements OutboxEventData
+final class OutboxEventDTO implements OutboxEventData
 {
     public function __construct(
-        private string $type,
-        private array $payload,
-        private array $metadata = [],
-        private ?string $idempotencyKey = null,
+        private readonly string $type,
+        private readonly array $payload,
+        private readonly array $metadata = [],
+        private readonly ?string $idempotencyKey = null,
     ) {}
 
     public static function make(string $type, array $payload, array $metadata = [], ?string $idempotencyKey = null): self

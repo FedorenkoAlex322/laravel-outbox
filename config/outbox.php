@@ -105,7 +105,7 @@ return [
         'driver' => env('OUTBOX_LOCK_DRIVER', 'database'),
 
         'redis' => [
-            'connection' => env('OUTBOX_REDIS_CONNECTION', 'default'),
+            'store' => env('OUTBOX_REDIS_STORE', 'redis'),
             'prefix' => 'outbox:lock:',
         ],
     ],

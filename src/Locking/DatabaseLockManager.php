@@ -7,21 +7,31 @@ use Outbox\Contracts\LockManager;
 
 class DatabaseLockManager implements LockManager
 {
+    private ?string $owner = null;
+
     public function acquire(string $key, int $ttlSeconds): bool
     {
-        return Cache::lock($key, $ttlSeconds)->get();
+        $lock = Cache::lock($key, $ttlSeconds);
+        $acquired = $lock->get();
+
+        if ($acquired) {
+            $this->owner = $lock->owner();
+        }
+
+        return $acquired;
     }
 
     public function release(string $key): void
     {
-        Cache::lock($key)->forceRelease();
+        Cache::restoreLock($key, $this->owner)->release();
+        $this->owner = null;
     }
 
     public function extend(string $key, int $ttlSeconds): bool
     {
         // Laravel's cache lock doesn't have native extend.
-        // Release and re-acquire as a workaround.
-        $this->release($key);
+        // Force release and re-acquire as best effort.
+        Cache::lock($key)->forceRelease();
 
         return $this->acquire($key, $ttlSeconds);
     }

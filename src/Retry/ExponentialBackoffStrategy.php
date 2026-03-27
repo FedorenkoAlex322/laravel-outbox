@@ -32,7 +32,7 @@ class ExponentialBackoffStrategy implements RetryStrategy
         $delay = min($delay, $this->maxDelay);
 
         // Add jitter (0-25% random addition)
-        $jitter = (int) ($delay * 0.25 * (mt_rand(0, 100) / 100));
+        $jitter = (int) ($delay * 0.25 * (random_int(0, 100) / 100));
 
         return $delay + $jitter;
     }

@@ -14,12 +14,17 @@ class DeleteCleanupStrategy implements CleanupStrategy
         $totalDeleted = 0;
 
         do {
-            $deleted = OutboxEvent::query()
+            $ids = OutboxEvent::query()
                 ->where('status', OutboxEventStatus::Processed->value)
                 ->where('processed_at', '<', $threshold)
                 ->limit($batchSize)
-                ->delete();
+                ->pluck('id');
 
+            if ($ids->isEmpty()) {
+                break;
+            }
+
+            $deleted = OutboxEvent::whereIn('id', $ids)->delete();
             $totalDeleted += $deleted;
         } while ($deleted >= $batchSize);
 

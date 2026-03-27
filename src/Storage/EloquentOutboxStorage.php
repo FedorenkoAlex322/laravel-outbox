@@ -59,7 +59,7 @@ class EloquentOutboxStorage implements OutboxStorage
                 // fall back to regular FOR UPDATE for SQLite and older databases.
                 try {
                     $events = (clone $query)->lock('FOR UPDATE SKIP LOCKED')->get();
-                } catch (\Throwable) {
+                } catch (\Illuminate\Database\QueryException) {
                     $events = $query->lockForUpdate()->get();
                 }
 
