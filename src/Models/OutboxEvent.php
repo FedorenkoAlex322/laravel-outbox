@@ -1,13 +1,13 @@
 <?php
 
-namespace Outbox\Models;
+namespace FedorenkoAlex322\LaravelOutbox\Models;
 
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
-use Outbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
 
 /**
  * @property int $id

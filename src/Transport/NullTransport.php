@@ -1,10 +1,10 @@
 <?php
 
-namespace Outbox\Transport;
+namespace FedorenkoAlex322\LaravelOutbox\Transport;
 
 use Illuminate\Support\Facades\Log;
-use Outbox\Contracts\Transport;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 class NullTransport implements Transport
 {

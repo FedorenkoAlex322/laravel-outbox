@@ -1,15 +1,15 @@
 <?php
 
-namespace Outbox\Storage;
+namespace FedorenkoAlex322\LaravelOutbox\Storage;
 
 use DateTimeInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Outbox\Contracts\OutboxEventData;
-use Outbox\Contracts\OutboxStorage;
-use Outbox\Contracts\RetryStrategy;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxEventData;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 class EloquentOutboxStorage implements OutboxStorage
 {

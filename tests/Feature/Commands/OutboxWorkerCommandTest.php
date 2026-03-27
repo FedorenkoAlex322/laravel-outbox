@@ -1,11 +1,11 @@
 <?php
 
-namespace Outbox\Tests\Feature\Commands;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Feature\Commands;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\DTOs\OutboxEventDTO;
-use Outbox\Contracts\OutboxManager;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\DTOs\OutboxEventDTO;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class OutboxWorkerCommandTest extends TestCase
 {

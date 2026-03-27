@@ -1,11 +1,11 @@
 <?php
 
-namespace Outbox\Tests\Unit\Models;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Unit\Models;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class OutboxEventTest extends TestCase
 {

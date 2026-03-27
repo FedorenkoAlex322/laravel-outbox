@@ -1,9 +1,9 @@
 <?php
 
-namespace Outbox\Tests\Unit\Retry;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Unit\Retry;
 
-use Outbox\Retry\ExponentialBackoffStrategy;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Retry\ExponentialBackoffStrategy;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class ExponentialBackoffStrategyTest extends TestCase
 {

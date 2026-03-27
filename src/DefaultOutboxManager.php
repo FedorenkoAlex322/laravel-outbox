@@ -1,14 +1,14 @@
 <?php
 
-namespace Outbox;
+namespace FedorenkoAlex322\LaravelOutbox;
 
-use Outbox\Contracts\CleanupStrategy;
-use Outbox\Contracts\OutboxEventData;
-use Outbox\Contracts\OutboxManager;
-use Outbox\Contracts\OutboxStorage;
-use Outbox\Events\OutboxEventStored;
-use Outbox\Models\OutboxEvent;
-use Outbox\Worker\OutboxProcessor;
+use FedorenkoAlex322\LaravelOutbox\Contracts\CleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxEventData;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Events\OutboxEventStored;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Worker\OutboxProcessor;
 
 class DefaultOutboxManager implements OutboxManager
 {

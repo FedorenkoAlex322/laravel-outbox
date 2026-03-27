@@ -1,10 +1,10 @@
 <?php
 
-namespace Outbox\Transport;
+namespace FedorenkoAlex322\LaravelOutbox\Transport;
 
-use Outbox\Contracts\Transport;
-use Outbox\Jobs\OutboxEventJob;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Jobs\OutboxEventJob;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 class LaravelQueueTransport implements Transport
 {

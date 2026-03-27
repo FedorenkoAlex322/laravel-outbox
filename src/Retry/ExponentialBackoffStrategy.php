@@ -1,8 +1,8 @@
 <?php
 
-namespace Outbox\Retry;
+namespace FedorenkoAlex322\LaravelOutbox\Retry;
 
-use Outbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
 
 class ExponentialBackoffStrategy implements RetryStrategy
 {

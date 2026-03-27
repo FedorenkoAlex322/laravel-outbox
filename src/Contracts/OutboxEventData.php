@@ -1,6 +1,6 @@
 <?php
 
-namespace Outbox\Contracts;
+namespace FedorenkoAlex322\LaravelOutbox\Contracts;
 
 interface OutboxEventData
 {

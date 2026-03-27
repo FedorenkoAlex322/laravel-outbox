@@ -1,12 +1,12 @@
 <?php
 
-namespace Outbox\Worker;
+namespace FedorenkoAlex322\LaravelOutbox\Worker;
 
-use Outbox\Contracts\OutboxStorage;
-use Outbox\Contracts\RetryStrategy;
-use Outbox\Contracts\Transport;
-use Outbox\Events\OutboxEventFailed;
-use Outbox\Events\OutboxEventProcessed;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Events\OutboxEventFailed;
+use FedorenkoAlex322\LaravelOutbox\Events\OutboxEventProcessed;
 use Illuminate\Support\Str;
 
 class OutboxProcessor

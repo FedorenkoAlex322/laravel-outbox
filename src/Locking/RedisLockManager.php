@@ -1,10 +1,10 @@
 <?php
 
-namespace Outbox\Locking;
+namespace FedorenkoAlex322\LaravelOutbox\Locking;
 
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Support\Facades\Cache;
-use Outbox\Contracts\LockManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\LockManager;
 
 class RedisLockManager implements LockManager
 {

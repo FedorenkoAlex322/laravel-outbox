@@ -1,11 +1,11 @@
 <?php
 
-namespace Outbox\Tests\Feature\Commands;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Feature\Commands;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class OutboxCleanupCommandTest extends TestCase
 {

@@ -1,5 +1,5 @@
 {
-    "name": "dobro/laravel-outbox",
+    "name": "fedorenkoalex322/laravel-outbox",
     "description": "Outbox Pattern implementation for Laravel - reliable event delivery from database to external systems",
     "type": "library",
     "license": "MIT",
@@ -26,21 +26,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Outbox\\": "src/"
+            "FedorenkoAlex322\\LaravelOutbox\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Outbox\\Tests\\": "tests/"
+            "FedorenkoAlex322\\LaravelOutbox\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Outbox\\OutboxServiceProvider"
+                "FedorenkoAlex322\\LaravelOutbox\\OutboxServiceProvider"
             ],
             "aliases": {
-                "Outbox": "Outbox\\Facades\\Outbox"
+                "Outbox": "FedorenkoAlex322\\LaravelOutbox\\Facades\\Outbox"
             }
         }
     },

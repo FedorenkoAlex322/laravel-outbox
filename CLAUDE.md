@@ -4,10 +4,10 @@
 
 Composer-пакет для Laravel, реализующий Outbox Pattern для надежной доставки событий из БД во внешние системы. Решает проблему рассинхронизации DB / Queue (dual-write problem).
 
-- **Namespace:** `Outbox\`
+- **Namespace:** `FedorenkoAlex322\LaravelOutbox\`
 - **PHP:** ^8.1
 - **Laravel:** ^10 || ^11 || ^12
-- **Package name:** `dobro/laravel-outbox`
+- **Package name:** `fedorenkoalex322/laravel-outbox`
 
 ## Architecture
 

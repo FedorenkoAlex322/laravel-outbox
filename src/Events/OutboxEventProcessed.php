@@ -1,9 +1,9 @@
 <?php
 
-namespace Outbox\Events;
+namespace FedorenkoAlex322\LaravelOutbox\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 class OutboxEventProcessed
 {

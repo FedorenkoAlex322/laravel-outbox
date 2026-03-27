@@ -1,8 +1,8 @@
 <?php
 
-namespace Outbox\Tests;
+namespace FedorenkoAlex322\LaravelOutbox\Tests;
 
-use Outbox\OutboxServiceProvider;
+use FedorenkoAlex322\LaravelOutbox\OutboxServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase

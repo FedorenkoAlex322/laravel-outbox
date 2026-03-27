@@ -1,9 +1,9 @@
 <?php
 
-namespace Outbox\Tests\Unit\DTOs;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Unit\DTOs;
 
-use Outbox\Contracts\OutboxEventData;
-use Outbox\DTOs\OutboxEventDTO;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxEventData;
+use FedorenkoAlex322\LaravelOutbox\DTOs\OutboxEventDTO;
 use PHPUnit\Framework\TestCase;
 
 class OutboxEventDTOTest extends TestCase

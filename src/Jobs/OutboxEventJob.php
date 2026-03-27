@@ -1,6 +1,6 @@
 <?php
 
-namespace Outbox\Jobs;
+namespace FedorenkoAlex322\LaravelOutbox\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

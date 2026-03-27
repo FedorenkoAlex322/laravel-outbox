@@ -1,9 +1,9 @@
 <?php
 
-namespace Outbox\Commands;
+namespace FedorenkoAlex322\LaravelOutbox\Commands;
 
 use Illuminate\Console\Command;
-use Outbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
 
 class OutboxWorkerCommand extends Command
 {

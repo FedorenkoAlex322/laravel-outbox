@@ -1,6 +1,6 @@
 <?php
 
-namespace Outbox\Enums;
+namespace FedorenkoAlex322\LaravelOutbox\Enums;
 
 enum OutboxEventStatus: string
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Outbox\DTOs;
+namespace FedorenkoAlex322\LaravelOutbox\DTOs;
 
-use Outbox\Contracts\OutboxEventData;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxEventData;
 
 final class OutboxEventDTO implements OutboxEventData
 {

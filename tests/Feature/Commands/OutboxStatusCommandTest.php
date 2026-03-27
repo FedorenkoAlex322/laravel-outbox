@@ -1,11 +1,11 @@
 <?php
 
-namespace Outbox\Tests\Feature\Commands;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Feature\Commands;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class OutboxStatusCommandTest extends TestCase
 {
@@ -21,7 +21,7 @@ class OutboxStatusCommandTest extends TestCase
             ->assertSuccessful();
 
         // Verify the underlying stats are correct
-        $manager = $this->app->make(\Outbox\Contracts\OutboxManager::class);
+        $manager = $this->app->make(\FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager::class);
         $stats = $manager->getStats();
 
         $this->assertSame(1, $stats['pending']);

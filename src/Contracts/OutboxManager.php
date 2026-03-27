@@ -1,8 +1,8 @@
 <?php
 
-namespace Outbox\Contracts;
+namespace FedorenkoAlex322\LaravelOutbox\Contracts;
 
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 interface OutboxManager
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Outbox\Tests\Feature;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\Contracts\OutboxManager;
-use Outbox\Contracts\Transport;
-use Outbox\DTOs\OutboxEventDTO;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
-use Outbox\Tests\TestCase;
-use Outbox\Transport\NullTransport;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\DTOs\OutboxEventDTO;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Transport\NullTransport;
 
 class OutboxFullCycleTest extends TestCase
 {
@@ -50,7 +50,7 @@ class OutboxFullCycleTest extends TestCase
 
     public function test_store_event_transport_fails_and_verify_retry_scheduling(): void
     {
-        $storage = $this->app->make(\Outbox\Contracts\OutboxStorage::class);
+        $storage = $this->app->make(\FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage::class);
 
         $dto = OutboxEventDTO::make(
             type: 'order.created',

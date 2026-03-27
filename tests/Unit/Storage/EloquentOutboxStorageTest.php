@@ -1,14 +1,14 @@
 <?php
 
-namespace Outbox\Tests\Unit\Storage;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Unit\Storage;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\Contracts\RetryStrategy;
-use Outbox\DTOs\OutboxEventDTO;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
-use Outbox\Storage\EloquentOutboxStorage;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\DTOs\OutboxEventDTO;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Storage\EloquentOutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class EloquentOutboxStorageTest extends TestCase
 {

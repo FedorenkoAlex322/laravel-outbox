@@ -1,8 +1,8 @@
 <?php
 
-namespace Outbox\Tests\Unit\Enums;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Unit\Enums;
 
-use Outbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
 use PHPUnit\Framework\TestCase;
 
 class OutboxEventStatusTest extends TestCase

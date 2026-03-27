@@ -1,9 +1,9 @@
 <?php
 
-namespace Outbox\Locking;
+namespace FedorenkoAlex322\LaravelOutbox\Locking;
 
 use Illuminate\Support\Facades\Cache;
-use Outbox\Contracts\LockManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\LockManager;
 
 class DatabaseLockManager implements LockManager
 {

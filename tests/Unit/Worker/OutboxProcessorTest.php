@@ -1,17 +1,17 @@
 <?php
 
-namespace Outbox\Tests\Unit\Worker;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Unit\Worker;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
 use Mockery;
-use Outbox\Contracts\OutboxStorage;
-use Outbox\Contracts\RetryStrategy;
-use Outbox\Contracts\Transport;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
-use Outbox\Tests\TestCase;
-use Outbox\Worker\OutboxProcessor;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Worker\OutboxProcessor;
 
 class OutboxProcessorTest extends TestCase
 {

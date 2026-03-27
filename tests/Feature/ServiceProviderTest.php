@@ -1,15 +1,15 @@
 <?php
 
-namespace Outbox\Tests\Feature;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Feature;
 
-use Outbox\Contracts\CleanupStrategy;
-use Outbox\Contracts\LockManager;
-use Outbox\Contracts\OutboxManager;
-use Outbox\Contracts\OutboxStorage;
-use Outbox\Contracts\RetryStrategy;
-use Outbox\Contracts\Transport;
-use Outbox\Tests\TestCase;
-use Outbox\Worker\OutboxProcessor;
+use FedorenkoAlex322\LaravelOutbox\Contracts\CleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\LockManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\Worker\OutboxProcessor;
 
 class ServiceProviderTest extends TestCase
 {

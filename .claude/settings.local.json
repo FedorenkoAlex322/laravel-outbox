@@ -19,7 +19,18 @@
       "Bash(gh repo:*)",
       "Bash(gh auth:*)",
       "Bash(git remote:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(vendor/bin/phpunit)",
+      "Bash(ls:*)",
+      "Bash(find src/ tests/ -name \"*.php\" -exec sed -i 's/namespace Outbox\\\\\\\\/namespace FedorenkoAlex322\\\\\\\\LaravelOutbox\\\\\\\\/g' {} +)",
+      "Bash(find src/ tests/ -name \"*.php\" -exec sed -i 's/use Outbox\\\\\\\\/use FedorenkoAlex322\\\\\\\\LaravelOutbox\\\\\\\\/g' {} +)",
+      "Bash(find:*)",
+      "Bash(while read:*)",
+      "Bash(do perl:*)",
+      "Bash(php:*)",
+      "Bash(composer dump-autoload:*)"
     ]
   }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Outbox\Cleanup;
+namespace FedorenkoAlex322\LaravelOutbox\Cleanup;
 
-use Outbox\Contracts\CleanupStrategy;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Contracts\CleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 class DeleteCleanupStrategy implements CleanupStrategy
 {

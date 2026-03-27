@@ -1,13 +1,13 @@
 <?php
 
-namespace Outbox\Tests\Feature;
+namespace FedorenkoAlex322\LaravelOutbox\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Outbox\DTOs\OutboxEventDTO;
-use Outbox\Enums\OutboxEventStatus;
-use Outbox\Facades\Outbox;
-use Outbox\Models\OutboxEvent;
-use Outbox\Tests\TestCase;
+use FedorenkoAlex322\LaravelOutbox\DTOs\OutboxEventDTO;
+use FedorenkoAlex322\LaravelOutbox\Enums\OutboxEventStatus;
+use FedorenkoAlex322\LaravelOutbox\Facades\Outbox;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Tests\TestCase;
 
 class FacadeTest extends TestCase
 {

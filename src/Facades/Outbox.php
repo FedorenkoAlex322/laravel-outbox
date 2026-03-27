@@ -1,9 +1,9 @@
 <?php
 
-namespace Outbox\Facades;
+namespace FedorenkoAlex322\LaravelOutbox\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Outbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
 
 /**
  * @method static \Outbox\Models\OutboxEvent store(\Outbox\Contracts\OutboxEventData $event)

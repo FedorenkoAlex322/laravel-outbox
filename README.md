@@ -65,7 +65,7 @@ Your Application
 ## Installation
 
 ```bash
-composer require dobro/laravel-outbox
+composer require fedorenkoalex322/laravel-outbox
 ```
 
 Publish the configuration and migration files:
@@ -86,8 +86,8 @@ Store outbox events **inside your business transaction** to guarantee atomicity:
 
 ```php
 use Illuminate\Support\Facades\DB;
-use Outbox\DTOs\OutboxEventDTO;
-use Outbox\Facades\Outbox;
+use FedorenkoAlex322\LaravelOutbox\DTOs\OutboxEventDTO;
+use FedorenkoAlex322\LaravelOutbox\Facades\Outbox;
 
 DB::transaction(function () {
     $order = Order::create([
@@ -298,7 +298,7 @@ When `outbox.events.enabled` is `true`, the following events are dispatched:
 Listen for these events to add logging, metrics, alerting, or custom behavior:
 
 ```php
-use Outbox\Events\OutboxEventFailed;
+use FedorenkoAlex322\LaravelOutbox\Events\OutboxEventFailed;
 
 class OutboxFailureListener
 {
@@ -350,8 +350,8 @@ Implement the `Transport` contract to deliver events to any external system:
 ```php
 namespace App\Outbox;
 
-use Outbox\Contracts\Transport;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 use Illuminate\Support\Facades\Http;
 
 class WebhookTransport implements Transport
@@ -382,7 +382,7 @@ class WebhookTransport implements Transport
 Register it in a service provider:
 
 ```php
-use Outbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
 use App\Outbox\WebhookTransport;
 
 $this->app->singleton(Transport::class, function () {
@@ -397,7 +397,7 @@ Implement the `RetryStrategy` contract:
 ```php
 namespace App\Outbox;
 
-use Outbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
 
 class FixedDelayRetryStrategy implements RetryStrategy
 {
@@ -426,7 +426,7 @@ class FixedDelayRetryStrategy implements RetryStrategy
 Register it:
 
 ```php
-use Outbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
 use App\Outbox\FixedDelayRetryStrategy;
 
 $this->app->singleton(RetryStrategy::class, FixedDelayRetryStrategy::class);
@@ -439,8 +439,8 @@ Implement the `CleanupStrategy` contract:
 ```php
 namespace App\Outbox;
 
-use Outbox\Contracts\CleanupStrategy;
-use Outbox\Models\OutboxEvent;
+use FedorenkoAlex322\LaravelOutbox\Contracts\CleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Models\OutboxEvent;
 
 class SoftDeleteCleanupStrategy implements CleanupStrategy
 {
@@ -461,7 +461,7 @@ Implement `OutboxEventData` for domain-specific event objects:
 ```php
 namespace App\Outbox;
 
-use Outbox\Contracts\OutboxEventData;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxEventData;
 
 final readonly class OrderCreatedEvent implements OutboxEventData
 {

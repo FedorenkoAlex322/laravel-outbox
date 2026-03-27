@@ -1,26 +1,26 @@
 <?php
 
-namespace Outbox;
+namespace FedorenkoAlex322\LaravelOutbox;
 
 use Illuminate\Support\ServiceProvider;
-use Outbox\Cleanup\ArchiveCleanupStrategy;
-use Outbox\Cleanup\DeleteCleanupStrategy;
-use Outbox\Commands\OutboxCleanupCommand;
-use Outbox\Commands\OutboxStatusCommand;
-use Outbox\Commands\OutboxWorkerCommand;
-use Outbox\Contracts\CleanupStrategy;
-use Outbox\Contracts\LockManager;
-use Outbox\Contracts\OutboxManager;
-use Outbox\Contracts\OutboxStorage;
-use Outbox\Contracts\RetryStrategy;
-use Outbox\Contracts\Transport;
-use Outbox\Locking\DatabaseLockManager;
-use Outbox\Locking\RedisLockManager;
-use Outbox\Retry\ExponentialBackoffStrategy;
-use Outbox\Storage\EloquentOutboxStorage;
-use Outbox\Transport\LaravelQueueTransport;
-use Outbox\Transport\NullTransport;
-use Outbox\Worker\OutboxProcessor;
+use FedorenkoAlex322\LaravelOutbox\Cleanup\ArchiveCleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Cleanup\DeleteCleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Commands\OutboxCleanupCommand;
+use FedorenkoAlex322\LaravelOutbox\Commands\OutboxStatusCommand;
+use FedorenkoAlex322\LaravelOutbox\Commands\OutboxWorkerCommand;
+use FedorenkoAlex322\LaravelOutbox\Contracts\CleanupStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\LockManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxManager;
+use FedorenkoAlex322\LaravelOutbox\Contracts\OutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Contracts\RetryStrategy;
+use FedorenkoAlex322\LaravelOutbox\Contracts\Transport;
+use FedorenkoAlex322\LaravelOutbox\Locking\DatabaseLockManager;
+use FedorenkoAlex322\LaravelOutbox\Locking\RedisLockManager;
+use FedorenkoAlex322\LaravelOutbox\Retry\ExponentialBackoffStrategy;
+use FedorenkoAlex322\LaravelOutbox\Storage\EloquentOutboxStorage;
+use FedorenkoAlex322\LaravelOutbox\Transport\LaravelQueueTransport;
+use FedorenkoAlex322\LaravelOutbox\Transport\NullTransport;
+use FedorenkoAlex322\LaravelOutbox\Worker\OutboxProcessor;
 
 class OutboxServiceProvider extends ServiceProvider
 {
